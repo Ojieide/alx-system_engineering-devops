@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /tmp and mkdir my_first_directory
+sudo mkdir /tmp/my_first_directory
