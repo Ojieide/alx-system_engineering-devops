@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo -s cd /var
+sudo -s cd ..
