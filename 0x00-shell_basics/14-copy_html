@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -i *.html /root/alx-system_engineering-devops
+sudo cp -i *.html /root/alx-system_engineering-devops
