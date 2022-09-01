@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chmod 744 /tmp/hello
+chmod 744 hello
