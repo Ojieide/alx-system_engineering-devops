@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chmod 700 /tmp/hello
+chmod u=rwx,g=r,o= hello
