@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script that configures a new Ubuntu machine to respect above requirements
+# configures your Nginx server so that /redirect_me is redirecting to another page
 
 sudo apt-get update
 sudo apt-get install -y nginx
@@ -9,4 +9,3 @@ string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.y
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
 sudo service nginx restart
-
