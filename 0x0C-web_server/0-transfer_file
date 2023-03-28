@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Transfer a file to your server with scp (secure copy - remote file)
+# -i: Selects the file from which the identity (private key) for public key authentication is read.
+# -o: ssh option
+pathtofile="$1"
+ipaddr="$2"
+username="$3"
+pathsshkey="$4"
+if [ $# -eq 4 ]; then
+    scp -o StrictHostKeyChecking=no -i "$pathsshkey" "$pathtofile" "$username@$ipaddr":~/
+else
+    echo 'Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY'
+fi
