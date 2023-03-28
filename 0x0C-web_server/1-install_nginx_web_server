@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
-# Install nginx web server and basic setup
-sudo apt-get update -y
-sudo apt-get install nginx -y
-# Adjust the firewall
-# sudo ufw enable -y
-sudo ufw allow 'OpenSSH'
-sudo ufw allow 'Nginx HTTP'
-# Take backup of the original index
-sudo cp /var/www/html/index.nginx-debian.html /var/www/html/bkup_index.nginx-debian.html
-# Changing to sudo for update the file
-sudo su
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
+# installs nginx and configure it to listens on port 80
+
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install nginx
+sudo chown -R ubuntu:ubuntu /var/www
+echo "Hello World!" > /var/www/html/index.html
 sudo service nginx start
