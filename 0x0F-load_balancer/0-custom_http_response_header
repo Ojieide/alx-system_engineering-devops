@@ -18,3 +18,4 @@ sudo sed -i "/\t#error_page/s/#//g" /etc/nginx/sites-available/default
 sudo sed -i "/^server {/a\ \tadd_header X-Served-By $(hostname);" /etc/nginx/sites-enabled/default
 
 sudo service nginx restart
+
