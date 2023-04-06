@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-# Bash script that will display information about subdomains
-subdomains=( "www" "lb-01" "web-01" "web-02" )
+subdomains_all=( "www" "lb-01" "web-01" "web-02" )
 
 runDig () {
     subdomain=$1
@@ -11,7 +9,7 @@ runDig () {
 
 if [ $# -eq 1 ]; then
     domain="$1"
-    for i in "${subdomains[@]}"
+    for i in "${subdomains_all[@]}"
     do
 	runDig "$i" "$domain"
     done
