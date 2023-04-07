@@ -33,12 +33,21 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend alx-frontend
-        bind 100.26.229.144:80
-        bind 100.26.229.144:443 ssl crt /etc/haproxy/certs/ojay.tech.pem
-        mode http
-        default_backend alx-backend
-backend alx-backend
+frontend ojay
+        bind 10.247.243.157:80
+        bind 10.247.243.157:443 ssl crt /etc/haproxy/certs/ojay.tech.pem
+        stats uri /haproxy?stats
+        default_backend web-servers
+
+backend web-servers
         balance roundrobin
-        server 140268-web-01 54.237.45.220:80 check
-        server 140268-web-02 54.237.63.152:80 check
+        server 140268-web-01 10.247.67.124:80
+        server 140268-web-02 10.247.121.130:80
+
+listen stats
+        bind *:8080
+        stats enable
+        stats uri /
+        stats refresh 5s
+        stats realm Haproxy\ Statistics
+        stats auth ojay:abc@123         #Login User and Password for the monitoring
