@@ -42,3 +42,4 @@ backend alx-backend
         balance roundrobin
         server 140268-web-01 54.237.45.220:80 check
         server 140268-web-02 54.237.63.152:80 check
+
