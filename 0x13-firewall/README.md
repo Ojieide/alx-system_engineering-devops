@@ -4,4 +4,5 @@
 <li>(SSH)</li>
 <li>(HTTPS SSL)</li>
 <li>(HTTP)</li>
+</ul>
 <p>Configure web-01 so that its firewall redirects port 8080/TCP to port 80/TCP</p>
