@@ -41,3 +41,4 @@ server-id       = 1
 log_bin         = /var/log/mysql/mysql-bin.log
 # Enabling binlog_do_db directive
 binlog_do_db    = tyrell_corp
+
