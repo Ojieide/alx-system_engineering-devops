@@ -43,3 +43,4 @@ log_bin         = /var/log/mysql/mysql-bin.log
 binlog_do_db    = tyrell_corp
 # Enabling relay-log directive
 relay-log       = /var/log/mysql/mysql-relay-bin.log
+
