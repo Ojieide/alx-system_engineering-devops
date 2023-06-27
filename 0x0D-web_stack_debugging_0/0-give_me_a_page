@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script runs Apache on the container and returns a page containing Hello Holberton
+echo "ServerName localhost" >> /etc/apache2.conf
+service apache2 start
