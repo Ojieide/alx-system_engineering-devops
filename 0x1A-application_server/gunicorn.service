@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Gunicorn congig file to serve the content (web_dynamic/2-hbnb.py)
 [Unit]
 Description=Gunicorn instance to serve Airbnb_clone_v4 content
